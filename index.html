@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/mnswhite.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <meta name="description" content="MNS Problem Solver - Cabinet de consulting digital. Nous aidons les entreprises à accélérer leur croissance grâce à des solutions technologiques, stratégiques et innovantes." />
+    <meta name="keywords" content="MNS Problem Solver, consulting digital, transformation digitale, développement logiciel, stratégie digitale, Afrique, Gabon, Port-Gentil, applications, croissance entreprise" />
+    <meta name="author" content="MNS Problem Solver" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#0A0A0A" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="MNS Problem Solver | Accélérez votre croissance digitale" />
+    <meta property="og:description" content="Une équipe de consultants digitaux qui transforme vos enjeux en performance mesurable." />
+    <meta property="og:image" content="/mnsblack.png" />
+    <meta property="og:url" content="https://MNS-problemsolver.com" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MNS Problem Solver" />
+    <meta name="twitter:description" content="Nous ne faisons pas du digital. Nous créons de la croissance." />
+    <meta name="twitter:image" content="/mnsblack.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <title>MNS Problem Solver | Consulting Digital &amp; Croissance</title>
+
+    <!-- STRUCTURED DATA -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "MNS Problem Solver",
+        "url": "https://MNS-problemsolver.com",
+        "logo": "/logo-MNS.png",
+        "description": "Cabinet de consulting digital spécialisé dans la croissance, la transformation digitale et le développement de solutions technologiques.",
+        "sameAs": [
+          "https://www.linkedin.com/company/MNS-problem-solver"
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "MNS Problem Solver",
+        "description": "Consultants digitaux spécialisés en développement logiciel, stratégie et transformation digitale et suivis de projets.",
+        "areaServed": "Africa",
+        "knowsAbout": [
+          "Développement Web",
+          "Applications mobiles",
+          "Transformation digitale",
+          "Consulting stratégique"
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <!-- LOADER PREMIUM -->
+    <div id="initial-loader">
+      <div class="loader-content">
+        <div class="logo-circle">
+          <span>MNS</span>
+        </div>
+        <div class="brand">MNS</div>
+        <div class="sub">PROBLEM SOLVER</div>
+        <div class="bar"></div>
+      </div>
+    </div>
+
+    <!-- STYLES -->
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: #0A0A0A;
+        font-family: 'Inter', sans-serif;
+      }
+
+      #initial-loader {
+        position: fixed;
+        inset: 0;
+        background: #0A0A0A;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease;
+      }
+
+      .loader-content {
+        text-align: center;
+      }
+
+      .logo-circle {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #8B5CF6, #a78bfa);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        animation: pulse 1.6s infinite;
+        box-shadow: 0 0 40px rgba(139, 92, 246, 0.4);
+      }
+
+      .logo-circle span {
+        color: white;
+        font-weight: 800;
+        font-size: 20px;
+        letter-spacing: 2px;
+      }
+
+      .brand {
+        margin-top: 24px;
+        color: white;
+        font-weight: 800;
+        font-size: 22px;
+        letter-spacing: 6px;
+      }
+
+      .sub {
+        margin-top: 6px;
+        color: #6b7280;
+        font-size: 11px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+      }
+
+      .bar {
+        width: 40px;
+        height: 3px;
+        background: #8B5CF6;
+        margin: 20px auto 0;
+        border-radius: 4px;
+        animation: loading 1.2s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(0.95); opacity: 0.8; }
+      }
+
+      @keyframes loading {
+        0% { width: 40px; }
+        50% { width: 70px; }
+        100% { width: 40px; }
+      }
+    </style>
+
+    <!-- APP -->
+    <script type="module" src="/src/index.tsx"></script>
+
+    <!-- LOADER SCRIPT -->
+    <script>
+      window.addEventListener('load', function () {
+        var loader = document.getElementById('initial-loader');
+        setTimeout(function () {
+          loader.style.opacity = '0';
+          setTimeout(function () { loader.style.display = 'none'; }, 500);
+        }, 400);
+      });
+    </script>
+  </body>
+</html>
