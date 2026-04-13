@@ -57,7 +57,7 @@ export const Header = ({ onOpenContactModal }: HeaderProps) => {
             <img
               src="/mnsblack.png"
               alt="MNS"
-              className="h-18 w-auto md:h-16 object-contain"
+              className="h-16 w-auto md:h-16 object-contain"
               loading="eager"
             />
           </a>
