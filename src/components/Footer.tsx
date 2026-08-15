@@ -222,7 +222,7 @@ export const Footer = () => {
               href="mailto:contact@MNSproblemsolver.com"
               className="hover:text-brand-violet transition-colors duration-300">
               
-              contact@MNSproblemsolver.com
+              smebedoh33+contactmnsproblemsolver@gmail.com
             </a>
           </div>
 

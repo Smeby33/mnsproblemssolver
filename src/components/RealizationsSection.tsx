@@ -13,6 +13,22 @@ type Project = {
 const projects: Project[] = [
   {
     badge: 'Projet client prive',
+    title: 'Complexe scolaire Privé Ange raphaël',
+    description:
+      "Site d'établissement scolaire permettant de gérer les informations sur les inscriptions et ré-inscriptions au sein de l'établissement ainsi que d'autres services.Le site est optimisés pour le référencement sur le web et pour les appareils mobiles.",
+    image: 'https://www.congoecole.com/media/28/download/magnific_photography-of-an-african_2980994982.png?v=1',
+    url: 'https://complexeangeraphael.vercel.app/'
+  },
+  {
+    badge: 'Projet client prive',
+    title: 'Les villas Shaima',
+    description:
+      "Site de gestion de villas en ligne avec reservation et informations détaillées sur les villas pour un particulier.Et aussi le site est optimiser pour la cconnexion aux appareils connectés à internet des villas pour la gestion de l'éclairage, de la climatisation et d'autres fonctionnalités.",
+    image: 'https://res.cloudinary.com/tsh3fcdv/image/upload/f_auto,q_auto/Capture_d_écran_2026-08-15_010237',
+    url: 'https://lesvillasshaima.com/'
+  },
+  {
+    badge: 'Projet client prive',
     title: 'Odile & Jean-Pierre',
     description:
       "Site de mariage avec reservation et billet d'invitation pour un particulier.",
@@ -98,7 +114,7 @@ export const RealizationsSection = () => {
             </p>
           </motion.div>
 
-          <div className="flex flex-col gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[700px] overflow-auto pr-2">
             {projects.map((project, index) => {
               const isActive = project.url === activeProject.url;
               return (
@@ -106,7 +122,7 @@ export const RealizationsSection = () => {
                   key={project.url}
                   type="button"
                   onClick={() => setActiveProjectUrl(project.url)}
-                  className={`group relative overflow-hidden rounded-3xl border p-4 text-left transition-all duration-300 ${
+                  className={`group relative overflow-hidden rounded-3xl border p-4 text-left flex flex-col h-full transition-all duration-300 ${
                     isActive
                       ? 'border-brand-violet bg-brand-violet/20 shadow-[0_0_35px_rgba(139,92,246,0.25)]'
                       : 'border-white/20 bg-white/10 backdrop-blur-xl hover:border-brand-violet/60 hover:bg-white/15'
